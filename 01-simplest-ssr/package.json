@@ -1,0 +1,11 @@
+{
+  "name": "01-simplest-ssr",
+  "version": "1.0.0",
+  "description": "Simplest version of Universal JavaScript.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Justin Schroeder <justin@wearebraid.com>",
+  "license": "MIT"
+}
