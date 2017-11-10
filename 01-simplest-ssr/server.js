@@ -1,16 +1,15 @@
 const http = require('http')
 const page = require('./universal')
 const fs = require('fs');
+const path = require('path');
 
 let server = http.createServer((req, res) => {
-  switch (req.url) {
-    case "/universal.js":
-      res.writeHead(200, {'Content-Type': 'application/json'})
-      res.end(fs.readFileSync('universal.js', 'utf8'))
-      break
-    default:
-      res.writeHead(200, {'Content-Type': 'text/html'})
-      res.end(page.render(true))
+  if (fs.existsSync(path.basename(req.url))) {
+    res.writeHead(200, {'Content-Type': 'application/javascript'})
+    res.end(fs.readFileSync(path.basename(req.url), 'utf8'))
+  } else {
+    res.writeHead(200, {'Content-Type': 'text/html'})
+    res.end(page.render(true))
   }
 })
 

@@ -9,9 +9,8 @@ module.exports = {
       </head>
     <body>
       Current time is: <span id="time">{{ time }}</span>
-      <script>
-        setInterval(() => module.exports.render(), 100)
-      </script>
+      <div id="copyright">{{ copyright }}</div>
+      <script>setInterval(() => module.exports.render(), 100)</script>
     </body>
   </html>
   `,
@@ -30,7 +29,8 @@ module.exports = {
   content: function () {
     let date = new Date()
     return {
-      time: `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}.${date.getMilliseconds()}`
+      time: `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}.${date.getMilliseconds()}`,
+      copyright: `&copy; ${date.getFullYear()} <a href="https://www.wearebraid.com">Braid LLC.</a> Absolutely No Rights Reserved.`
     }
   }
 }
