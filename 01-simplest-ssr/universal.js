@@ -8,8 +8,8 @@ module.exports = {
       <script src="universal.js"></script>
       </head>
     <body>
-      Current time is: <span id="time">{{ time }}</span>
-      <div id="copyright">{{ copyright }}</div>
+      <div>Current time is: <span id="time">{{ time }}</span></div>
+      <small id="copyright">{{ copyright }}</small>
       <script>setInterval(() => module.exports.render(), 100)</script>
     </body>
   </html>
