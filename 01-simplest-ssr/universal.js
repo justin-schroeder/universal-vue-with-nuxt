@@ -1,28 +1,36 @@
-if (typeof window !== 'undefined') {
-  var module = {}
-  var count = 0
-}
-
 module.exports = {
   markup: `
   <!DOCTYPE html>
   <html>
     <head>
       <title>Universal JS</title>
-    </head>
-    <body>
-      Rendered by: <span id="app">{{ page }}</span>
+      <script>var module = {}</script>
       <script src="universal.js"></script>
+      </head>
+    <body>
+      Current time is: <span id="time">{{ time }}</span>
+      <script>
+        setInterval(() => module.exports.render(), 100)
+      </script>
     </body>
-  </html>`,
+  </html>
+  `,
   render: function (ssr) {
-    return ssr ? this.markup.replace('{{ page }}', this.content(ssr)) : this.content(ssr)
+    let content = this.content()
+    let markup = this.markup
+    for (let field in content) {
+      if (ssr) {
+        markup = markup.replace(`{{ ${field} }}`, content[field])
+      } else {
+        document.getElementById(field).innerHTML = content[field]
+      }
+    }
+    return ssr ? markup : true
   },
-  content: function (ssr) {
-    return ssr ? 'Server Side' : `Front End ${++count}`
+  content: function () {
+    let date = new Date()
+    return {
+      time: `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}.${date.getMilliseconds()}`
+    }
   }
-}
-
-if (typeof window !== 'undefined') {
-  setInterval(() => document.getElementById('app').innerHTML = module.exports.render(), 400)
 }
