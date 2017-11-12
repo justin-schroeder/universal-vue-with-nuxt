@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Universal Vue</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script>
+      // Silly little shims to eliminate commonjs loader for demo
+      var require = function (){ return window.Vue };
+      var module = {}
+    </script>
+  </head>
+  <body>
+    <div id="app">${app}</div>
+    <script src="/universal.js"></script>
+    <script>
+      module.exports.$mount('#app')
+    </script>
+  </body>
+</html>

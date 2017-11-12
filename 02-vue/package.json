@@ -1,0 +1,15 @@
+{
+  "name": "02-simplest-vue",
+  "version": "1.0.0",
+  "description": "Simplest server side rendered Vue.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Justin Schroeder <justin@wearebraid.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.5.3",
+    "vue-server-renderer": "^2.5.3"
+  }
+}
