@@ -1,0 +1,29 @@
+{
+  "name": "03-vue-webpack",
+  "version": "1.0.0",
+  "description": "Server side vue using webpack",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack --config webpack.server.config.js --hide-modules"
+  },
+  "author": "Justin Schroeder <justin@wearebraid.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "url-loader": "^0.6.2",
+    "vue": "^2.5.3",
+    "vue-loader": "^13.5.0",
+    "vue-server-renderer": "^2.5.3",
+    "vue-style-loader": "^3.0.3",
+    "vue-template-compiler": "^2.5.3",
+    "webpack": "^3.8.1",
+    "webpack-merge": "^4.1.1",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2"
+  }
+}
