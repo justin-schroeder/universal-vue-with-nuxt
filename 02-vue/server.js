@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
       res.end(fs.readFileSync('./universal.js', 'utf-8'))
       break;
     default:
-      renderer.renderToString(app)
+      renderer.renderToString(app())
         .then(html => res.end(template.replace('{{ app }}', html)))
         .catch(err => {throw err})
   }
