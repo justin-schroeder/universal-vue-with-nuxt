@@ -1,3 +1,8 @@
+/**
+ * File: webpack.base.config.js
+ *
+ * Contains definitions for parsing our .vue files, ESNext, sass, css, and files.
+ */
 const webpack = require('webpack')
 let path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')

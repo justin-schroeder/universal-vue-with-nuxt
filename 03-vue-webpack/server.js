@@ -6,9 +6,9 @@ const clientManifest = require('./.bundles/vue-ssr-client-manifest.json')
 const template = fs.readFileSync('./index.html', 'utf-8')
 
 const renderer = createBundleRenderer(serverBundle, {
-  runInNewContext: false, // recommended
-  template, // (optional) page template
-  clientManifest // (optional) client build manifest
+  runInNewContext: false,
+  template,
+  clientManifest
 })
 
 const server = http.createServer((req, res) => {
@@ -21,8 +21,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, {'Content-Type': 'application/json'})
       res.end(fs.readFileSync('./.bundles/main.js', 'utf-8'))
     default:
-      const context = {url: req.url}
-      renderer.renderToString(context)
+      renderer.renderToString({url: req.url})
         .then(html => res.end(html))
         .catch(err => console.error(err))
   }

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './components/App'
+import App from './App'
 
 export default function () {
   const app = new Vue({

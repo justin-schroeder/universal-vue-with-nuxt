@@ -1,3 +1,9 @@
+/**
+ * File: webpack.server.config.js
+ *
+ * Contains definitions for creating the webpack server bundle. Most of this
+ * content is taken straight from the ssr.vuejs.org documentation.
+ */
 const merge = require('webpack-merge')
 const nodeExternals = require('webpack-node-externals')
 const baseConfig = require('./webpack.base.config.js')

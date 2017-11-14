@@ -1,4 +1,4 @@
-import bootApp from './app'
+import bootApp from './universal'
 
 export default context => {
   const { app } = bootApp()

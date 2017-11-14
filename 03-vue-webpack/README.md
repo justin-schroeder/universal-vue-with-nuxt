@@ -1,5 +1,5 @@
-# 02-vue
---------
+# 03-vue-webpack
+----------------
 
 In this example we recreate 01-vanilla with a Vue. In order to do this we use
 the `vue-server-render` package. For client side hydration we add some hacky

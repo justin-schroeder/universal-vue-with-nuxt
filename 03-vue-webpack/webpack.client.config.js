@@ -1,3 +1,9 @@
+/**
+ * File: webpack.server.config.js
+ *
+ * Contains definitions for creating the webpack client manifest. Most of this
+ * content is taken straight from the ssr.vuejs.org documentation.
+ */
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.config.js')

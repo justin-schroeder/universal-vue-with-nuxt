@@ -1,4 +1,4 @@
-import bootApp from './app'
+import bootApp from './universal'
 
 // client-specific bootstrapping logic...
 
