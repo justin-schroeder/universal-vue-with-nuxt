@@ -4,7 +4,9 @@
   "description": "Server side vue using webpack",
   "main": "server.js",
   "scripts": {
-    "build": "webpack --config webpack.server.config.js --hide-modules"
+    "server": "webpack --config webpack.server.config.js --hide-modules --watch",
+    "client": "webpack --config webpack.client.config.js --hide-modules --watch",
+    "dev": "npm run server & npm run client & node server.js"
   },
   "author": "Justin Schroeder <justin@wearebraid.com>",
   "license": "MIT",

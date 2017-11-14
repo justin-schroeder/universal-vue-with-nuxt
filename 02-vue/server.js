@@ -7,6 +7,7 @@ const app = require('./universal.js')
 const server = http.createServer((req, res) => {
   switch (req.url) {
     case "/universal.js":
+      res.writeHead(200, {'Content-Type': 'application/json'})
       res.end(fs.readFileSync('./universal.js', 'utf-8'))
       break;
     default:

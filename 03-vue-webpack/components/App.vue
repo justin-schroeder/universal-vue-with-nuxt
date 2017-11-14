@@ -1,7 +1,7 @@
 <template>
   <div>
     <timer :date="date" />
-    <small><span v-html="copy"></span> {{ date.getFullYear() }} Braid LLC. No rights reserved.</small>
+    <small><span v-html="copy"></span> {{ date.getFullYear() }} Braid LLC. Absolutely no rights reserved.</small>
   </div>
 </template>
 
@@ -17,6 +17,9 @@ export default {
       copy: '&copy;',
       date: new Date()
     }
+  },
+  mounted () {
+    setInterval(() => {this.date = new Date()}, 100)
   }
 }
 </script>
