@@ -1,7 +1,10 @@
 <template>
-  <div>
+  <div class="grid">
     <timer :date="date" />
-    <small><span v-html="copy"></span> {{ date.getFullYear() }} Braid LLC. Absolutely no rights reserved.</small>
+    <div class="info">
+      <a id="logo" :href="url"></a>
+      <small id="copyright"><span v-html="copy"></span> {{ date.getFullYear() }} <a :href="url">Braid LLC.</a> <span id="rights">Absolutely no rights reserved.</span></small>
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,7 @@ export default {
   },
   data () {
     return {
+      url: 'https://www.wearebraid.com',
       copy: '&copy;',
       date: new Date()
     }
