@@ -12,7 +12,7 @@ module.exports = {
       <div class="grid">
         <h3>Current time: <span id="time">{{ time }}</span></h3>
         <div class="info">
-          <a id="logo" href="wearebraid.com"></a>
+          <a id="logo" href="https://www.wearebraid.com"></a>
           <small id="copyright">{{ copyright }}</small>
         </div>
       </div>
