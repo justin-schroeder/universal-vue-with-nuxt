@@ -10,7 +10,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Re-creating our 01-vanilla example with nuxt' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://assets.wearebraid.com/universal-vue.css' }
     ]
   },
   /*

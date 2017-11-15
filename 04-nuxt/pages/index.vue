@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <div id="time">Current time is: {{ hours }}:{{ minutes }}:{{ seconds }}.{{ milliseconds }}</div>
-    <small><span v-html="copy"></span> {{ year }} Braid LLC. Absolutely no rights reserved.</small>
+  <div class="grid">
+    <h3>Current time is: <span id="time">{{ hours }}:{{ minutes }}:{{ seconds }}.{{ milliseconds }}</span></h3>
+    <div class="info">
+      <a id="logo" :href="url"></a>
+      <small id="copyright"><span v-html="copy"></span> {{ year }} <a :href="url">Braid LLC.</a> <span id="rights">Absolutely no rights reserved.</span></small>
+    </div>
   </div>
 </template>
 
@@ -10,7 +13,8 @@ export default {
   data () {
     return {
       date: new Date(),
-      copy: '&copy;'
+      copy: '&copy;',
+      url: 'https://www.wearebraid.com'
     }
   },
   head () {

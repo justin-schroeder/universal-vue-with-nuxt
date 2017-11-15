@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div>Current time is: {{ hours }}:{{ minutes }}:{{ seconds }}.{{ milliseconds }}</div>
-  </div>
+  <h3>
+    Current time is: <span id="time">{{ hours }}:{{ minutes }}:{{ seconds }}.{{ milliseconds }}</span>
+  </h3>
 </template>
 
 <script>

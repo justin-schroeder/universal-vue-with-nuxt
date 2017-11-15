@@ -3,22 +3,26 @@ const Vue = require('vue')
 module.exports = function app () {
   return new Vue({
     template: `
-    <div>
-      <div>
+    <div class="grid">
+        <h3>
         Current time is:
         <span id="time">{{ hours }}:{{ minutes }}:{{ seconds }}.{{ milliseconds }}</span>
-      </div>
-      <small>
-        <span v-html="copy"></span>
-        {{ year }}
-        <a href="https://www.wearebraid.com">Braid LLC.</a>
-        Absolutely No Rights Reserved.
-      </small>
+        </h3>
+        <div class="info">
+          <a id="logo" :href="url"></a>
+          <small id="copyright">
+            <span v-html="copy"></span>
+            {{ year }}
+            <a :href="url">Braid LLC.</a>
+            <span id="rights">Absolutely No Rights Reserved.</span>
+          </small>
+        </div>
     </div>`,
     data () {
       return {
         date: new Date(),
-        copy: '&copy;'
+        copy: '&copy;',
+        url: 'https://www.wearebraid.com'
       }
     },
     computed: {
