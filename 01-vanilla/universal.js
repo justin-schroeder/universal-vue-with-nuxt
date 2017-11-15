@@ -4,7 +4,7 @@ module.exports = {
   <html>
     <head>
       <title>Universal JS</title>
-      <link href="http://assets.wearebraid.com/universal-vue.css" rel="stylesheet" type="text/css">
+      <link href="//assets.wearebraid.com/universal-vue.css" rel="stylesheet" type="text/css">
       <script>var module = {}</script>
       <script src="universal.js"></script>
       </head>

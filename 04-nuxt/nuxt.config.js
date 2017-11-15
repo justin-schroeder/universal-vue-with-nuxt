@@ -11,7 +11,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href: 'http://assets.wearebraid.com/universal-vue.css' }
+      { rel: 'stylesheet', type: 'text/css', href: 'https://assets.wearebraid.com/universal-vue.css' }
     ]
   },
   /*
