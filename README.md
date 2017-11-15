@@ -17,6 +17,6 @@ Example                                    | Description
 
 ## Sponsor
 
-Examples were written and maintained by [Braid LLC](https://www.wearebraid.com), and offered freely under an MIT license.
+Examples were by [Braid LLC](https://www.wearebraid.com), and are offered freely under an MIT license.
 
 [<img src="https://assets.wearebraid.com/sig.png" title="Written and maintained by Braid LLC" alt="Braid LLC" width="150" height="44">](https://www.wearebraid.com)
