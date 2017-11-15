@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Rozha+One');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Rozha One', serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 6em;
+  line-height: 1;
+
+  @media (min-width: 600px) {
+    font-size: 8em;
+  }
+}
+
+.page {
+  margin: 0 auto;
+  margin-bottom: 2em;
+  max-width: 900px;
+  width: calc(100% - 2em);
+}
+
+.header {
+  min-height: 5em;
+  text-align: center;
+}
+
+.main-content {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.25em;
+  margin: 0 auto;
+  max-width: 600px;
+  width: calc(100% - 1em);
+
+  @media (min-width: 600px) {
+    font-size: 1.75em;
+  }
+}
+
+// Transition
+// -----------------------------------------------------------------------------
+
+.slide-enter-active, .slide-leave-active {
+  transition: all .5s;
+  .header,
+  .main-content {
+    transition: all .5s
+  }
+}
+.slide-enter {
+  .header {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  .main-content {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+.slide-enter-to {
+  .header {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  .main-content {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.slide-leave-to {
+  .header {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  .main-content {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
